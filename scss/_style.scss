@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+///landing page: header
+.shared_bg {
+  background: url(../images/main-bg.svg), #23382c;
+  background-size: cover;
+  background-position: center;
+  height: 885px;
+  width: 100%;
+  @include myflex(column, center, center);
+  header {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    transition: all 1s;
+    .container {
+      @extend %responsivecontainer;
+      @include myflex(row, space-between, center);
+      a {
+        @include mytheme(#ffffff, 48px, 500, 64px);
+        font-family: "Kalnia", sans-serif;
+      }
+      nav {
+        @include myflex(row, space-between, center);
+
+        ul {
+          @include myflex(row, space-between, center);
+          gap: 40px;
+          @media (max-width: 1250px) {
+            display: none;
+          }
+          li {
+            a {
+              @include mytheme(#ffffff, 28px, 400, 32px);
+            }
+          }
+        }
+        .menu-icon {
+          display: none;
+          @media (max-width: 1250px) {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .offer-box {
+    padding-top: 243px;
+    @include myflex(column, center, center);
+    gap: 10px;
+    h3 {
+      @include mytheme(#ffffff, 40px, 500, 46px);
+    }
+    h1 {
+      @include mytheme(#ffffff, 64px, 600, 75px);
+    }
+    button {
+      @include mytheme(#ffffff, 24px, 500, 28px);
+      background-color: #ff6700;
+      border: none;
+      padding: 20px 40px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+  //for js, header bg style
+  .scroll {
+    background-color: white;
+  }
+}
+
+/////
+
+///
+
+.s-discover {
+  padding-top: 60px;
+  padding-bottom: 92px;
+  background-color: white;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, center, space-between);
+    h1 {
+      @include mytheme(#424244, 32px, 500, 37px);
+      margin-bottom: 20px;
+    }
+    p {
+      @include mytheme(#424244, 20px, 400, 23px);
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+    span {
+      align-self: flex-end;
+
+      @include mytheme(#c85100, 20px, 500, 23px);
+      text-decoration: underline;
+    }
+    .cards-box {
+      margin-top: 10px;
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      row-gap: 20px;
+      @media (max-width: 1600px) {
+        column-gap: 140px;
+        justify-content: space-around;
+      }
+      @media (max-width: 1000px) {
+        column-gap: 10px;
+        justify-content: space-between;
+      }
+      @media (max-width: 800px) {
+        column-gap: 10px;
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        border-radius: 20px;
+        width: 380px;
+        @media (max-width: 900px) {
+          width: 350px;
+        }
+        @media (max-width: 800px) {
+          width: 500px;
+        }
+        @media (max-width: 560px) {
+          width: 100%;
+        }
+
+        img {
+          max-width: 380px;
+          width: 100%;
+          margin-bottom: 10px;
+          @media (max-width: 800px) {
+            max-width: 500px;
+          }
+        }
+        h3 {
+          margin-bottom: 10px;
+          @include mytheme(#424244, 32px, 500, 37px);
+        }
+        p {
+          @include mytheme(#252525, 18px, 400, 21px);
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+///
+
+////////video section
+.s-video {
+  .container {
+    @extend %responsivecontainer;
+    h1 {
+      @include mytheme(#424244, 40px, 500, 46px);
+      margin-bottom: 40px;
+    }
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 20px;
+      object-fit: fill;
+    }
+  }
+}
+
+////section blogs
+.s-blogs {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .container {
+    @extend %responsivecontainer;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 800px) {
+      align-items: center;
+    }
+    h1 {
+      @include mytheme(#424244, 40px, 500, 46px);
+      margin-bottom: 40px;
+    }
+    #blogs {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      row-gap: 40px;
+      @media (max-width: 800px) {
+        justify-content: center;
+      }
+      .blog-card {
+        width: 513px;
+        @media (max-width: 1150px) {
+          width: 350px;
+        }
+        @media (max-width: 800px) {
+          width: 514px;
+        }
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+        img {
+          max-width: 514px;
+          width: 100%;
+          @media (max-width: 1200px) {
+            // width: 80%;
+          }
+        }
+        h3 {
+          @include mytheme(#424244, 32px, 500, 37px);
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+//form section
+.myForm {
+  background-color: #e0e0e0;
+  padding-top: 50px;
+  padding-bottom: 52px;
+  margin-bottom: 60px;
+  .container {
+    @extend %responsivecontainer;
+    h2 {
+      @include mytheme(#424244, 40px, 500, 46px);
+      margin-bottom: 40px;
+    }
+    form {
+      .select-box {
+        @include myflex(row, space-between, center);
+        flex-wrap: wrap;
+        column-gap: 80px;
+        gap: 80px 40px;
+        @media (max-width: 1660px) {
+          gap: 20px;
+        }
+        select {
+          width: 750px;
+          border: none;
+          @include mytheme(#424244, 28px, 400, 32px);
+          outline: none;
+          padding: 33px 20px 33px 50px;
+          border-radius: 20px;
+          @media (max-width: 1660px) {
+            width: 500px;
+            gap: 20px 20px;
+          }
+          @media (max-width: 1150px) {
+            width: 400px;
+          }
+          @media (max-width: 920px) {
+            width: 350px;
+          }
+          @media (max-width: 790px) {
+            width: 100%;
+          }
+        }
+      }
+      button {
+        padding: 30px 50px;
+        margin-top: 40px;
+        border: none;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #ff6700;
+        @include mytheme(#ffffff, 32px, 600, 37px);
+        cursor: pointer;
+        &:hover {
+          background-color: #c85100;
+        }
+      }
+    }
+  }
+}
+///footer
+footer {
+  padding: 40px 0;
+  background-color: #eae9e9;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    @media (max-width: 990px) {
+      justify-content: flex-start;
+      gap: 30px 40px;
+    }
+    @media (max-width: 680px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .logo-box {
+      width: 280px;
+      @include myflex(column, space-between, flex-start);
+      gap: 20px;
+      @media (max-width: 990px) {
+        width: 350px;
+      }
+      .logo {
+        @include mytheme(#424244, 48px, 500, 64px);
+        font-family: "Kalnia", sans-serif;
+      }
+      p {
+        @include mytheme(#424244, 24px, 400, 28px);
+      }
+      h5 {
+        @include mytheme(#424244, 32px, 400, 37px);
+      }
+      .icon-box {
+        @include myflex(row, space-between, center);
+        width: 190px;
+      }
+    }
+    .links {
+      @include myflex(column, space-between, flex-start);
+      gap: 20px;
+      h3 {
+        @include mytheme(#424244, 32px, 400, 37px);
+      }
+      nav {
+        ul {
+          @include myflex(column, space-between, flex-start);
+          gap: 20px;
+          li {
+            a {
+              @include mytheme(#424244, 24px, 400, 28px);
+            }
+          }
+        }
+      }
+    }
+    .contact-news {
+      @include myflex(column, space-between, flex-start);
+      @media (max-width: 990px) {
+        flex-direction: row;
+        gap: 40px;
+      }
+      @media (max-width: 680px) {
+        flex-direction: column;
+      }
+
+      .contact {
+        @include myflex(column, space-between, flex-start);
+        gap: 20px;
+        @media (max-width: 990px) {
+          width: 350px;
+        }
+        h3 {
+          @include mytheme(#424244, 32px, 400, 37px);
+        }
+        a {
+          @include mytheme(#424244, 24px, 400, 28px);
+        }
+      }
+      .news {
+        @include myflex(column, space-between, flex-start);
+        gap: 20px;
+        h3 {
+          @include mytheme(#424244, 32px, 400, 37px);
+        }
+        .email {
+          position: relative;
+          input {
+            border: 1px solid #424244;
+            border-radius: 10px;
+            padding: 16px 13px;
+            width: 100%;
+            background-color: transparent;
+            &::placeholder {
+              @include mytheme(#424244, 18px, 400, 21px);
+            }
+          }
+          button {
+            border: none;
+            position: absolute;
+            background-color: transparent;
+            right: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  span {
+    @include myflex(row, center, center);
+    @include mytheme(#424244, 24px, 400, 28px);
+    padding-top: 10px;
+  }
+}

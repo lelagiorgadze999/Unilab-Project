@@ -1,0 +1,11 @@
+%responsivecontainer {
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1600px) {
+    width: 90%;
+  }
+  @media (max-width: 440px) {
+    width: 90%;
+  }
+}

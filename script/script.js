@@ -1,0 +1,68 @@
+"use strict";
+
+import { data, blogs } from "./data.js";
+console.log(data);
+
+const cardContainer = document.getElementById("cards-box");
+const blogsContainer = document.getElementById("blogs");
+console.log(blogsContainer);
+
+// discover section cards
+data.forEach((cardData) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const image = document.createElement("img");
+  image.src = cardData.imageUrl;
+  image.alt = cardData.description;
+
+  const description = document.createElement("h3");
+  description.textContent = cardData.description;
+
+  const paragraph = document.createElement("p");
+  paragraph.textContent = cardData.paragraph;
+
+  card.appendChild(image);
+  card.appendChild(description);
+  card.appendChild(paragraph);
+
+  cardContainer.appendChild(card);
+});
+
+///blogs section cards
+console.log(blogs);
+blogs.forEach((cardData) => {
+  const card = document.createElement("div");
+  card.classList.add("blog-card");
+  const image = document.createElement("img");
+  image.src = cardData.imageUrl;
+  image.alt = cardData.title;
+  const title = document.createElement("h3");
+  title.textContent = cardData.title;
+  card.appendChild(image);
+  card.appendChild(title);
+  blogsContainer.appendChild(card);
+});
+
+//////////////////////////////////
+//scroll
+
+const header = document.getElementById("myHeader");
+const links = document.querySelectorAll(".link");
+const menuIcons = document.querySelectorAll(".menu");
+console.log(menuIcons);
+console.log(links);
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    header.classList.add("scroll");
+    links.forEach((link) => (link.style.color = "#424244"));
+    menuIcons.forEach((icon) => (icon.style.stroke = "#424244"));
+  } else {
+    header.classList.remove("scroll");
+    links.forEach((link) => (link.style.color = "#ffffff"));
+    menuIcons.forEach((icon) => (icon.style.stroke = "#ffffff"));
+  }
+}
+window.onscroll = function () {
+  scrollFunction();
+};
