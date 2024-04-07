@@ -151,18 +151,18 @@ ul {
   list-style: none;
 }
 
-footer .container, .myForm .container, .s-blogs .container, .s-video .container, .s-discover .container, .shared_bg header .container {
+footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
   max-width: 1580px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1600px) {
-  footer .container, .myForm .container, .s-blogs .container, .s-video .container, .s-discover .container, .shared_bg header .container {
+  footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
     width: 90%;
   }
 }
 @media (max-width: 440px) {
-  footer .container, .myForm .container, .s-blogs .container, .s-video .container, .s-discover .container, .shared_bg header .container {
+  footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
     width: 90%;
   }
 }
@@ -399,6 +399,65 @@ footer .container, .myForm .container, .s-blogs .container, .s-video .container,
   border-radius: 20px;
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+.s-slider {
+  padding: 60px 0;
+}
+.s-slider .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.s-slider .container h1 {
+  color: #424244;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 46px;
+  margin-bottom: 30px;
+}
+.s-slider .container .arrow_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.s-slider .container .arrow_box svg {
+  cursor: pointer;
+}
+.s-slider .container .slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+.s-slider .container .slider .slide {
+  width: 380px;
+}
+.s-slider .container .slider img {
+  width: 380px;
+}
+.s-slider .container .slider h4 {
+  color: #424244;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 37px;
+  margin-bottom: 10px;
+}
+.s-slider .container .slider span {
+  color: #424244;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 10px;
 }
 
 .s-blogs {

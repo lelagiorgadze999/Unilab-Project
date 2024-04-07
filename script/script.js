@@ -66,3 +66,39 @@ function scrollFunction() {
 window.onscroll = function () {
   scrollFunction();
 };
+
+///////////////////////////////////
+///slider
+// JavaScript
+const slides = document.querySelectorAll(".slide");
+const btnRight = document.querySelector(".slider__btn--left");
+const btnLeft = document.querySelector(".slider__btn--right");
+let maxSlide = slides.length;
+let curSlide = 0;
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+goToSlide(0);
+
+const nextSlide = function () {
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+    goToSlide(curSlide);
+    console.log("nextslide");
+  }
+};
+const prevSlide = function () {
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+  }
+  goToSlide(curSlide);
+  console.log("prevslide");
+};
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
