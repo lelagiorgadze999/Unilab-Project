@@ -103,13 +103,13 @@
       <div class="container">
         <div class="filter-side">
           <div class="cheapest">
-            <h5>Cheapest</h5>
-            <h5>Quickest</h5>
+            <h5 class="underline">Cheapest</h5>
+            <h5 class="underline">Quickest</h5>
             <h5>best</h5>
           </div>
-          <div class="filter-box">
+          <div class="checkbox">
             <h4>Stops</h4>
-            <form action="#">
+            <form action="#" class="myform">
               <div class="input-label">
                 <input type="checkbox" />
                 <label for="direct"> Direct</label>
@@ -126,7 +126,35 @@
           </div>
         </div>
 
-        <div class="ticket-side"></div>
+        <div class="ticket-side">
+          <div class="air-logo">
+            <img src="../images/air-logo.svg" alt="aircompany logo" />
+            <h3>Georgian Airlines</h3>
+          </div>
+          <div class="takeoff-hours">
+            <div class="takeoff-landing">
+              <span>take off</span>
+              <span>landing</span>
+            </div>
+            <div class="hours">
+              <div>
+                <span>12:00</span>
+                <input type="range" />
+                <span>19:00</span>
+              </div>
+            </div>
+          </div>
+          <span>7 Hours</span>
+
+          <div class="price-box">
+            <div class="price">
+              <span>Price</span>
+              <span>600$</span>
+            </div>
+            <hr />
+            <button>View Deal</button>
+          </div>
+        </div>
       </div>
     </section>
     <script src="../script/service.js"></script>

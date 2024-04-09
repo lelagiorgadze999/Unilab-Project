@@ -151,18 +151,18 @@ ul {
   list-style: none;
 }
 
-.main-service .container, .service-header .container, .s-popup .container, .s-sign-in .form-container, .white-header .container, footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
+.s-ticket .container, .main-service .container, .service-header .container, .s-popup .container, .s-sign-in .form-container, .white-header .container, footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
   max-width: 1580px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1600px) {
-  .main-service .container, .service-header .container, .s-popup .container, .s-sign-in .form-container, .white-header .container, footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
+  .s-ticket .container, .main-service .container, .service-header .container, .s-popup .container, .s-sign-in .form-container, .white-header .container, footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
     width: 90%;
   }
 }
 @media (max-width: 440px) {
-  .main-service .container, .service-header .container, .s-popup .container, .s-sign-in .form-container, .white-header .container, footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
+  .s-ticket .container, .main-service .container, .service-header .container, .s-popup .container, .s-sign-in .form-container, .white-header .container, footer .container, .myForm .container, .s-blogs .container, .s-slider .container, .s-video .container, .s-discover .container, .shared_bg header .container {
     width: 90%;
   }
 }
@@ -1190,7 +1190,8 @@ body {
 
 .main-service {
   padding-top: 60px;
-  padding-bottom: 308px;
+  padding-bottom: 60px;
+  background-color: #f5f1f1;
 }
 .main-service .container .btn-box {
   display: flex;
@@ -1241,6 +1242,7 @@ body {
 }
 .main-service .container .options-box select {
   border: none;
+  background-color: transparent;
 }
 .main-service .container .input-box {
   display: flex;
@@ -1272,4 +1274,141 @@ body {
   line-height: 23px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.s-ticket {
+  padding: 60px;
+  background-color: #f5f1f1;
+}
+.s-ticket .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.s-ticket .container .filter-side .cheapest {
+  padding: 20px 30px;
+  background-color: #ffffff;
+  color: #424244;
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  width: 380px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+.s-ticket .container .filter-side .cheapest .underline {
+  border-bottom: 2px solid #ff6700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.s-ticket .container .filter-side .checkbox {
+  padding: 20px 30px;
+  background-color: #ffffff;
+  width: 380px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.s-ticket .container .filter-side .checkbox h4 {
+  color: #424244;
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.s-ticket .container .filter-side .checkbox .myform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.s-ticket .container .filter-side .checkbox .myform .input-label {
+  display: flex;
+  gap: 20px;
+}
+.s-ticket .container .filter-side .checkbox .myform .input-label label {
+  color: #424244;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.s-ticket .container .filter-side .checkbox .myform .input-label input {
+  width: 30px;
+  height: 30px;
+}
+.s-ticket .container .ticket-side {
+  padding: 40px 132px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 68px;
+}
+@media (max-width: 1600px) {
+  .s-ticket .container .ticket-side {
+    display: none;
+  }
+}
+.s-ticket .container .ticket-side .air-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.s-ticket .container .ticket-side .takeoff-hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.s-ticket .container .ticket-side .takeoff-hours .takeoff-landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 166px;
+}
+.s-ticket .container .ticket-side .takeoff-hours .takeoff-landing .hours {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.s-ticket .container .ticket-side .takeoff-hours .takeoff-landing .hours input[type=range]::-webkit-slider-thumb {
+  background-color: #4caf50;
+}
+.s-ticket .container .ticket-side .price-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 53px;
+}
+.s-ticket .container .ticket-side .price-box hr {
+  width: 173px;
+  border: 2px solid #424244;
+}
+.s-ticket .container .ticket-side .price-box button {
+  color: #424244;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  background-color: #ff8c3e;
+  border: none;
+  padding: 10px 42px;
+  border-radius: 10px;
 }/*# sourceMappingURL=global.css.map */
