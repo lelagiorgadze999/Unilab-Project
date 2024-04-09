@@ -19,7 +19,7 @@
     .container {
       @extend %responsivecontainer;
       @include myflex(row, space-between, center);
-      a {
+      .logo {
         @include mytheme(#ffffff, 48px, 500, 64px);
         font-family: "Kalnia", sans-serif;
       }
@@ -33,8 +33,12 @@
             display: none;
           }
           li {
-            a {
+            .link {
               @include mytheme(#ffffff, 28px, 400, 32px);
+            }
+            .man-icon {
+              cursor: pointer;
+              position: relative;
             }
           }
         }
@@ -44,6 +48,35 @@
             display: flex;
           }
         }
+      }
+      .menu-box {
+        background-color: #ffffff;
+        width: 267px;
+        position: absolute;
+        top: 105px;
+        right: 5%;
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+        z-index: 1000;
+
+        nav {
+          ul {
+            @include myflex(column, flex-start, space-between);
+            li {
+              width: 247px;
+
+              padding: 10px 20px;
+              border-bottom: 1px solid #ff6700;
+              a {
+                @include mytheme(#424244, 24px, 400, 28px);
+              }
+            }
+          }
+        }
+      }
+      .active {
+        display: block;
       }
     }
   }
@@ -71,10 +104,6 @@
     background-color: white;
   }
 }
-
-/////
-
-///
 
 .s-discover {
   padding-top: 60px;
@@ -174,7 +203,7 @@
   .container {
     @extend %responsivecontainer;
     @include myflex(column, flex-start, flex-start);
-
+    // overflow: hidden important;
     h1 {
       @include mytheme(#424244, 40px, 500, 46px);
       margin-bottom: 30px;
@@ -188,19 +217,34 @@
       }
     }
     .slider {
-      @include myflex(row, space-between, center);
+      @include myflex(row, center, center);
       gap: 20px;
-      overflow: hidden;
+
+      margin: 0 auto;
+      position: relative;
+
+      /* IN THE END */
+      overflow-x: hidden;
+      width: 100%;
 
       .slide {
         width: 380px;
+        top: 0;
+        z-index: 2;
+
+        height: 50rem;
+        @include myflex(column, flex-start, space-between);
+        gap: 10px;
+
         @media (max-width: 1000px) {
           width: 340px;
         }
+        @media (max-width: 500px) {
+          width: 100%;
+        }
       }
       img {
-        max-width: 380px;
-        width: 100%;
+        width: 380px;
       }
       h4 {
         @include mytheme(#424244, 32px, 500, 37px);
@@ -209,6 +253,9 @@
       span {
         @include mytheme(#424244, 24px, 500, 28px);
         margin-bottom: 10px;
+      }
+      .price {
+        display: block;
       }
     }
   }
@@ -437,5 +484,321 @@ footer {
     @include myflex(row, center, center);
     @include mytheme(#424244, 24px, 400, 28px);
     padding-top: 10px;
+  }
+}
+
+////////////////////////////
+///sign in
+.white-header {
+  padding: 20px 0;
+  background-color: #eae9e9;
+  .container {
+    @extend %responsivecontainer;
+
+    nav {
+      ul {
+        @include myflex(row, space-between, center);
+        .logo {
+          @include mytheme(#424244, 48px, 500, 64px);
+          font-family: "Kalnia", sans-serif;
+        }
+        .man-icon {
+          cursor: pointer;
+        }
+      }
+    }
+    .menu-box {
+      background-color: #ffffff;
+      width: 267px;
+      position: absolute;
+      top: 105px;
+      right: 5%;
+      padding: 10px;
+      border-radius: 10px;
+      display: none;
+      z-index: 1000;
+
+      nav {
+        ul {
+          @include myflex(column, flex-start, space-between);
+          li {
+            width: 247px;
+            padding: 10px 20px;
+            .link {
+              @include mytheme(#424244, 24px, 400, 28px);
+            }
+
+            border-bottom: 1px solid #ff6700;
+          }
+        }
+      }
+    }
+    .active {
+      display: block;
+    }
+  }
+}
+.s-sign-in {
+  padding-top: 126px;
+  padding-bottom: 156px;
+  @include myflex(row, center, center);
+  background-color: #fdf8f8;
+
+  .form-container {
+    @extend %responsivecontainer;
+    background-color: #ffffff;
+    padding: 50px 70px;
+    width: 540px;
+    border-radius: 10px;
+    @include myflex(column, flex-start, flex-start);
+    gap: 20px;
+    @media (max-width: 640px) {
+      width: 340px;
+    }
+    .myform {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+    }
+    .label-input {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      label {
+        @include mytheme(#424244, 16px, 400, 18px);
+        opacity: 70%;
+      }
+      input {
+        padding: 10px 10px 10px 20px;
+        border: 1px solid #ff6700;
+        border-radius: 10px;
+        outline: none;
+      }
+    }
+    .btn {
+      @include mytheme(#ffffff, 20px, 400, 23px);
+      background-color: #ff6700;
+      border: none;
+      border-radius: 10px;
+      padding: 13.5px 160px;
+      cursor: pointer;
+    }
+    .break {
+      @include myflex(row, space-between, flex-end);
+      gap: 20px;
+      opacity: 70%;
+      hr {
+        border: 1px solid #424244;
+
+        width: 122px;
+      }
+      span {
+        @include mytheme(#424244, 16px, 400, 18px);
+      }
+    }
+    .icon-div {
+      @include myflex(row, space-between, center);
+      width: 100%;
+      img {
+        border: 1px solid #424244;
+        width: 70px;
+        height: 70px;
+        padding: 15px;
+      }
+    }
+    hr {
+      border: 1px solid #424244;
+      opacity: 70%;
+      width: 100%;
+    }
+    p {
+      @include mytheme(#424244, 16px, 400, 18px);
+      text-align: center;
+      span {
+        color: #c85100;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/////
+/// popup section
+body {
+  position: relative;
+}
+.s-popup {
+  padding: 60px;
+  position: absolute;
+  z-index: 10;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 15px;
+  .container {
+    @extend %responsivecontainer;
+    .term-policy {
+      @include myflex(column, center, center);
+      gap: 60px;
+      width: 932px;
+      @media (max-width: 2000px) {
+        width: 100%;
+      }
+      h3 {
+        text-align: center;
+        @include mytheme(#424244, 32px, 400, 37px);
+        margin-bottom: 20px;
+      }
+      p {
+        @include mytheme(#424244, 18px, 400, 21px);
+      }
+      button {
+        @include mytheme(#ffffff, 20px, 400, 23px);
+        background-color: #ff6700;
+        border: none;
+        border-radius: 10px;
+        padding: 13.5px 160px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #424244;
+  opacity: 60%;
+  z-index: 5;
+}
+.hidden {
+  display: none;
+}
+
+///////////////////
+/// /service
+.service-header {
+  background-color: #eae9e9;
+  padding: 20px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    .logo {
+      @include mytheme(#424244, 48px, 500, 64px);
+      font-family: "Kalnia", sans-serif;
+    }
+    nav {
+      @include myflex(row, space-between, center);
+
+      ul {
+        @include myflex(row, space-between, center);
+        gap: 40px;
+        @media (max-width: 1250px) {
+          display: none;
+        }
+        li {
+          .link {
+            @include mytheme(#424244, 28px, 400, 32px);
+          }
+          .man-icon {
+            cursor: pointer;
+            position: relative;
+            stroke: rgb(255, 255, 255);
+          }
+        }
+      }
+      .menu-icon {
+        display: none;
+        @media (max-width: 1250px) {
+          display: flex;
+        }
+      }
+    }
+    .menu-box {
+      background-color: #ffffff;
+      width: 267px;
+      position: absolute;
+      top: 105px;
+      right: 5%;
+      padding: 10px;
+      border-radius: 10px;
+      display: none;
+      z-index: 1000;
+
+      nav {
+        ul {
+          @include myflex(column, flex-start, space-between);
+          li {
+            width: 247px;
+
+            padding: 10px 20px;
+            border-bottom: 1px solid #ff6700;
+            a {
+              @include mytheme(#424244, 24px, 400, 28px);
+            }
+          }
+        }
+      }
+    }
+    .active {
+      display: block;
+    }
+  }
+}
+.main-service {
+  padding-top: 60px;
+  padding-bottom: 308px;
+  .container {
+    @extend %responsivecontainer;
+    .btn-box {
+      @include myflex(row, flex-start, flex-start);
+      gap: 40px;
+
+      button {
+        width: 188px;
+        border: none;
+        @include mytheme(black, 20px, 400, 23px);
+        background-color: transparent;
+        // background-color: #ff6700;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 30px;
+        cursor: pointer;
+      }
+      .btnactive {
+        color: #ffffff;
+        background-color: #ff6700;
+      }
+    }
+    .options-box {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      width: 409px;
+      @include myflex(row, space-between, center);
+      select {
+        border: none;
+      }
+    }
+    .input-box {
+      @include myflex(row, flex-start, center);
+      gap: 20px;
+      input {
+        padding: 25px 30px;
+        border: 1px solid #ff6700;
+        border-radius: 20px;
+        outline: none;
+      }
+      .search {
+        background-color: #ff6700;
+        padding: 20px 78px;
+        border: none;
+        @include mytheme(#ffffff, 20px, 400, 23px);
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
   }
 }

@@ -69,15 +69,14 @@ window.onscroll = function () {
 
 ///////////////////////////////////
 ///slider
-// JavaScript
 const slides = document.querySelectorAll(".slide");
-const btnRight = document.querySelector(".slider__btn--left");
-const btnLeft = document.querySelector(".slider__btn--right");
+const btnRight = document.querySelector(".slider__btn--right");
+const btnLeft = document.querySelector(".slider__btn--left");
 let maxSlide = slides.length;
 let curSlide = 0;
 const goToSlide = function (slide) {
   slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    (s, i) => (s.style.transform = `translateX(${25 * (i - slide)}%)`)
   );
 };
 goToSlide(0);
@@ -88,17 +87,26 @@ const nextSlide = function () {
   } else {
     curSlide++;
     goToSlide(curSlide);
-    console.log("nextslide");
   }
 };
 const prevSlide = function () {
   if (curSlide === 0) {
-    curSlide = maxSlide - 1;
+    // curSlide = maxSlide - 1;
+    return;
   } else {
     curSlide--;
   }
   goToSlide(curSlide);
-  console.log("prevslide");
 };
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
+
+/////////////////////////
+//menu
+const menuIcon = document.querySelector(".man-icon");
+const menuBox = document.querySelector(".menu-box");
+
+menuIcon.addEventListener("click", function (e) {
+  // Toggle the visibility of the menu box
+  menuBox.classList.toggle("active");
+});

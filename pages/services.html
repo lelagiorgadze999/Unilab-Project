@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="service-header">
+      <div class="container">
+        <a class="logo link" href="../index.html">ExploreEra</a>
+        <nav>
+          <ul>
+            <li><a href="../index.html" class="link">Home</a></li>
+            <li><a href="#" class="link">About us</a></li>
+            <li><a href="#" class="link">Our services</a></li>
+            <li><a href="#" class="link">Our offers</a></li>
+            <li>
+              <svg
+                class="menu man-icon"
+                width="26"
+                height="33"
+                viewBox="0 0 26 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.6667 31.5C24.6667 25.0567 19.4434 19.8333 13 19.8333C6.55672 19.8333 1.33337 25.0567 1.33337 31.5M13 14.8333C9.31814 14.8333 6.33337 11.8486 6.33337 8.16667C6.33337 4.48477 9.31814 1.5 13 1.5C16.6819 1.5 19.6667 4.48477 19.6667 8.16667C19.6667 11.8486 16.6819 14.8333 13 14.8333Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+          </ul>
+          <svg
+            class="menu-icon menu"
+            width="32"
+            height="20"
+            viewBox="0 0 32 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 18.3333H31M1 10H31M1 1.66666H31"
+              stroke=""
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </nav>
+        <div class="menu-box">
+          <nav>
+            <ul>
+              <li><a href="./pages/sign_in.html">Sign in</a></li>
+              <li><a href="./pages/sign-up.html">Sign up</a></li>
+              <li><a href="#">Sign out</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="main-service">
+      <div class="container">
+        <form action="#">
+          <div class="btn-box">
+            <button class="filter">Flights</button>
+            <button class="filter">Stays</button>
+            <button class="filter">Car Rentals</button>
+            <button class="filter">Cruises</button>
+            <button class="filter">Attractions</button>
+          </div>
+
+          <div class="options-box">
+            <select id="way">
+              <option value="One-way">One-way</option>
+              <option value="Two-way">Two-way</option>
+            </select>
+            <select id="adult">
+              <option value="1 Adult">1 Adult</option>
+              <option value="2 Adult">2 Adult</option>
+            </select>
+            <select id="class">
+              <option value="economy">Economy</option>
+              <option value="business">Business</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="From" />
+            <input type="text" placeholder="To" />
+            <div class="data-box">
+              <input type="data" placeholder="Calendar" />
+            </div>
+            <button class="search">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="s-ticket">
+      <div class="container">
+        <div class="filter-side">
+          <div class="cheapest">
+            <h5>Cheapest</h5>
+            <h5>Quickest</h5>
+            <h5>best</h5>
+          </div>
+          <div class="filter-box">
+            <h4>Stops</h4>
+            <form action="#">
+              <div class="input-label">
+                <input type="checkbox" />
+                <label for="direct"> Direct</label>
+              </div>
+              <div class="input-label">
+                <input type="checkbox" />
+                <label for="stop">One stop</label>
+              </div>
+              <div class="input-label">
+                <input type="checkbox" />
+                <label for="stops"> Two stops</label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="ticket-side"></div>
+      </div>
+    </section>
+    <script src="../script/service.js"></script>
+  </body>
+</html>
