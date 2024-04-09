@@ -755,7 +755,11 @@ body {
     @extend %responsivecontainer;
     .btn-box {
       @include myflex(row, flex-start, flex-start);
+      flex-wrap: wrap;
       gap: 40px;
+      @media (max-width: 520px) {
+        justify-content: center;
+      }
 
       button {
         width: 188px;
@@ -778,13 +782,22 @@ body {
       margin-bottom: 20px;
       width: 409px;
       @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      @media (max-width: 520px) {
+        width: 100%;
+        justify-content: center;
+      }
       select {
         border: none;
       }
     }
     .input-box {
       @include myflex(row, flex-start, center);
+      flex-wrap: wrap;
       gap: 20px;
+      @media (max-width: 520px) {
+        justify-content: center;
+      }
       input {
         padding: 25px 30px;
         border: 1px solid #ff6700;

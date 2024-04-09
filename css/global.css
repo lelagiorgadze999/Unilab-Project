@@ -1197,7 +1197,13 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 40px;
+}
+@media (max-width: 520px) {
+  .main-service .container .btn-box {
+    justify-content: center;
+  }
 }
 .main-service .container .btn-box button {
   width: 188px;
@@ -1225,6 +1231,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 520px) {
+  .main-service .container .options-box {
+    width: 100%;
+    justify-content: center;
+  }
 }
 .main-service .container .options-box select {
   border: none;
@@ -1234,7 +1247,13 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
+}
+@media (max-width: 520px) {
+  .main-service .container .input-box {
+    justify-content: center;
+  }
 }
 .main-service .container .input-box input {
   padding: 25px 30px;
